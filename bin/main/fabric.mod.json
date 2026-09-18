@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "errante",
+  "version": "${version}",
+  "name": "Errante",
+  "description": "Tu hogar, donde te lleve el camino. Base inicial del mod de caravanas.",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.errante.Errante"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

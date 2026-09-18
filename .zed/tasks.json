@@ -1,0 +1,4 @@
+[
+  {"label":"Errante: compilar","command":".\\errante.bat","args":["build"]},
+  {"label":"Errante: abrir Minecraft de prueba","command":".\\errante.bat","args":["runClient"]}
+]
