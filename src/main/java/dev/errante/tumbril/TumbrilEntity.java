@@ -10,6 +10,8 @@ import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 
 public class TumbrilEntity extends Entity {
+    private double followDistance = 2.0;
+
     public TumbrilEntity(EntityType<? extends TumbrilEntity> entityType, Level level) {
         super(entityType, level);
     }
@@ -30,8 +32,6 @@ public class TumbrilEntity extends Entity {
 	@Override
 	protected void readAdditionalSaveData(ValueInput input) {
 	}
-
-	private double followDistance = 2.0;
 
     public void setFollowDistance(double newDistance) {
         if(newDistance <= 0){

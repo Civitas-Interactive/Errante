@@ -3,6 +3,7 @@ package dev.errante;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import dev.errante.tumbril.ModEntities;
 
 public class Errante implements ModInitializer {
     public static final String MOD_ID = "errante";
@@ -11,5 +12,6 @@ public class Errante implements ModInitializer {
     @Override
     public void onInitialize() {
         LOGGER.info("Errante cargado. Tu hogar, donde te lleve el camino.");
+        ModEntities.initialize();
     }
 }
