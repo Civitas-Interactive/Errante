@@ -10,8 +10,6 @@ public class Errante implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        String nameTraveler = "Errante";
-        LOGGER.info("Bienvenido, " + nameTraveler + " ");
         LOGGER.info("Errante cargado. Tu hogar, donde te lleve el camino.");
     }
 }
