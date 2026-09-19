@@ -8,6 +8,9 @@
   "entrypoints": {
     "main": [
       "dev.errante.Errante"
+    ],
+    "client": [
+      "dev.errante.ErranteClient"
     ]
   },
   "depends": {
