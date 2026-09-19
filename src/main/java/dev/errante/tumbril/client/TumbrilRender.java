@@ -1,6 +1,7 @@
 package dev.errante.tumbril.client;
 
 import dev.errante.tumbril.TumbrilEntity;
+import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
@@ -17,8 +18,18 @@ public class TumbrilRender extends EntityRenderer<TumbrilEntity, TumbrilRenderSt
     public void submit(TumbrilRenderState state, PoseStack poseStack, SubmitNodeCollector submitNodeCollector,
             CameraRenderState camera) {
         super.submit(state, poseStack, submitNodeCollector, camera);
+        var renderType = this.model.renderType(TEXTURE);
         poseStack.pushPose();
         //submitNodeCollector.submitModel(model, state, poseStack, renderType, lightCoords, overlayCoords, outlineColor);
+        submitNodeCollector.submitModel(
+                model,
+                state,
+                poseStack,
+                renderType,
+                state.lightCoords,
+                OverlayTexture.NO_OVERLAY,
+                state.outlineColor
+        );
         poseStack.popPose();
     }
 

@@ -6,7 +6,7 @@ import dev.errante.tumbril.ModEntities;
 import dev.errante.tumbril.client.TumbrilModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.client.renderer.entity.NoopRenderer;
+import dev.errante.tumbril.client.TumbrilRender;
 
 public class ErranteClient implements ClientModInitializer {
     public static final ModelLayerLocation TUMBRIL_LAYER = new ModelLayerLocation(ModEntities.TUMBRIL_ID, "main");
@@ -14,7 +14,7 @@ public class ErranteClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ModelLayerRegistry.registerModelLayer(TUMBRIL_LAYER, TumbrilModel::createBodyLayer);
-        EntityRenderers.register(ModEntities.TUMBRIL, NoopRenderer::new);
+        EntityRenderers.register(ModEntities.TUMBRIL, TumbrilRender::new);
         Errante.LOGGER.info("Cliente de Errante preparado");
     }
 }
